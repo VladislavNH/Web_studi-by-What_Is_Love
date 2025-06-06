@@ -1,0 +1,87 @@
+.hero {
+  // режим таблетки
+
+  @extend .section;
+  min-width: 300px;
+  padding: 118px var(--standart-15px);
+  background: #2f303a;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: $tablet-width-divider;
+  margin: auto;
+  display: block;
+  background-image: var(--main-gradient), url('../images/x1/main-bg-tablet.jpg');
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: var(--main-gradient),
+      url('../images/x2/main-bg-tablet.jpg');
+  }
+
+
+  @media (max-width: $phone-width-divider) {
+    background-image: var(--main-gradient),
+      url('../images/x1/main-bg-phone.jpg');
+    max-width: $phone-width-divider;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: var(--main-gradient),
+        url('../images/x2/main-bg-phone.jpg');
+    }
+  }
+
+  @media (min-width: $tablet-width-divider) {
+    background-image: var(--main-gradient),
+      url('../images/x1/main-bg-desktop.jpg');
+    max-width: $desktop-width-divider;
+    padding: 200px var(--standart-15px);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: var(--main-gradient),
+        url('../images/x2/main-bg-desktop.jpg');
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    margin-bottom: 30px;
+    font-size: 26px;
+    line-height: 1.615;
+    text-transform: uppercase;
+    color: var(--white-color);
+    letter-spacing: 0.06em;
+    
+    @media (min-width: $tablet-width-divider) {
+      font-size: 44px;
+      line-height: 1.36;
+      width: 696px;
+      max-width: 768px;
+      height: 120px;
+      margin: auto;
+      margin-bottom: var(--standart-30px);
+    }
+  }
+
+  &__button {
+    @extend %standart-button;
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    padding: 10px 32px;
+  }
+
+  &__button:hover,
+  &__button:focus {
+    background: var(--button-hover-color);
+  }
+}

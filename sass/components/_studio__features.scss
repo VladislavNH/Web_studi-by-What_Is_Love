@@ -1,0 +1,100 @@
+.features {
+  @extend .section;
+
+  @media (max-width: $phone-width-divider) {
+    display: inline-block;
+    margin: auto;
+  }
+  @media (min-width: $tablet-width-divider) {
+    padding-bottom: 0px;
+  }
+
+  &__container {
+    @media (min-width: $phone-width-divider) {
+      margin-top: calc(-1 * var(--standart-30px));
+      margin-left: calc(-1 * var(--standart-30px));
+    }
+    @media (max-width: $phone-width-divider) {
+      display: inline-flex;
+      margin: auto;
+    }
+  }
+
+  &__content {
+    display: inline-flex;
+    flex-wrap: wrap;
+    @media (min-width: $tablet-width-divider) {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__content-item {
+    @media (min-width: $phone-width-divider) {
+      width: calc((100% - 60px) / 2);
+      margin-top: var(--standart-30px);
+      margin-left: var(--standart-30px);
+    }
+    @media (min-width: $tablet-width-divider) {
+      max-width: 270px;
+    }
+  }
+
+  &__content-item:nth-child(odd) {
+    @media (min-width: $phone-width-divider) {
+
+    }
+  }
+
+  &__content-item:not(:last-child) {
+    @media (max-width: $phone-width-divider) {
+      margin-bottom: var(--standart-30px);
+    }
+    @media (min-width: $tablet-width-divider) {
+    }
+  }
+
+  &__icon-container {
+    border: 0;
+    width: 100%;
+    height: 120px;
+    color: var(--black-color);
+    background: var(--light-grey-color);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: var(--standart-30px);
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    fill: currentColor;
+    margin: auto;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    margin-bottom: 10px;
+    text-align: center;
+
+    @media (min-width: $phone-width-divider) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    color: var(--secondary-text-color);
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
