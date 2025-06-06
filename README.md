@@ -1,2 +1,1 @@
-# goit-markup-hw-08
-goit-markup-hw-08
+Web_studi-by-What_Is_Love
